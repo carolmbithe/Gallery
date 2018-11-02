@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from django.http import HttpResponse,Http404
 import datetime as dt
 
@@ -10,25 +10,10 @@ def index(request):
 
 def today_photos(request):
     date=dt.date.today()
-    day=convert_dates(date)
-    html=f'''
-    <html>
-            <body>
-                <h1> {date.day}-{date.month}-{date.year}</h1>
-            </body>
-        </html>
-            '''
-    return HttpResponse(html)
 
-def convert_dates(dates):
-    # Function that gets the weekday number for the date.
-    day_number = dt.date.weekday(dates)
 
-    days = ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday',"Sunday"]
+    return render(request,'all-photos/today-photos.html',{"date":date})
 
-    # Returning the actual day of the week
-    day = days[day_number]
-    return day
 
 def past_photos(request,past_date):
     try:
@@ -39,12 +24,6 @@ def past_photos(request,past_date):
         # Raise 404 error when ValueError is thrown
         raise Http404()
 
-    day = convert_dates(date)
-    html = f'''
-        <html>
-            <body>
-                <h1>Photos for {day} {date.day}-{date.month}-{date.year}</h1>
-            </body>
-        </html>
-            '''
-    return HttpResponse(html)
+    if date == dt.date.today():
+        return redirect(today_photos)
+    return render(request,'all-photos/past-photos.html',{"date":date})
