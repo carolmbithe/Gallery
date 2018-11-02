@@ -52,7 +52,7 @@ class Image(models.Model):
     # def filter_by_location
 
     @classmethod
-    def get_photos(cls,id):
+    def get_photos(cls):
 
-        photos=Editor.objects.all()
+        photos=cls.objects.all()
         return photos
