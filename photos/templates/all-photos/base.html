@@ -4,13 +4,13 @@
   <meta charset="utf-8">
 
   {% if title %}
-  <title>  {{title}}</title>
+  <title>Personal Gallery - {{title}}</title>
   {% else %}
-    <title> Personal-Gallery </title>
+    <title> Personal Gallery </title>
   {% endif %}
 
 </head>
 <body>
-    {% block content %} <h1>Personal Gallery</h1> {%endblock%}
+    {% block content %} <h1>Photos for {{date|date:"l d-F Y"}}</h1> {%endblock%}
 </body>
 </html>
