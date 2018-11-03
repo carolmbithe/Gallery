@@ -48,6 +48,8 @@ class ImageTestClass(TestCase):
         self.new_image.save()
 
         self.new_image.category.add(self.new_category)
+        self.new_image.category.add(self.new_location)
+
 
     def tearDown(self):
         Category.objects.all().delete()
