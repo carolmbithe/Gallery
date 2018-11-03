@@ -38,9 +38,9 @@ def location(request,location_id):
     return render(request,'location.html',{"photos":photos})
 
 def category(request,category_id):
-    image=Image.objects.filter(id=category_id)
+    photos=Image.objects.filter(id=category_id)
 
-    return render(request,'category.html',{"image":image})
+    return render(request,'category.html',{"photos":photos})
 
 
 def image(request,image_id):

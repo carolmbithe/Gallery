@@ -5,10 +5,10 @@
  <div class="container">
 
    <div class="row">
-     <h1>Hey its workin</h1>
+
      {% for photo in photos %}
        <div class="col-sm-6 col-md-6">
-         <h1>{{photo.location.name}}
+         <h1 class="text-center">{{photo.location.name}}
           <img src="{{photo.image.url}}"  class="img-responsive" alt="">
        </div>
      {% endfor %}
