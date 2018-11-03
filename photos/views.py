@@ -1,7 +1,7 @@
 from django.shortcuts import render,redirect
 from django.http import HttpResponse,Http404
 import datetime as dt
-from .models import Image
+from .models import Image,Location
 
 
 # Create your views here.
@@ -43,3 +43,9 @@ def search_results(request):
     else:
         message = "You haven't searched for any image"
         return render(request, 'search.html',{"message":message})
+
+#
+# def filter_location(request,location_id):
+#     image=Image.objects.get(id=location_id)
+#
+#     return render(request,'all-photos/today-photos.html',{"image":image})
