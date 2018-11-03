@@ -32,11 +32,23 @@ def past_photos(request,past_date):
     return render(request,'all-photos/past-photos.html',{"date":date})
 
 
+def location(request,location_id):
+    photos=Image.objects.filter(id=location_id)
+
+    return render(request,'location.html',{"photos":photos})
+
+def category(request,category_id):
+    image=Image.objects.filter(id=category_id)
+
+    return render(request,'category.html',{"image":image})
+
+
 def image(request,image_id):
     try:
         image = Image.objects.get(id=image_id)
     except DoesNotExist:
-        return render(request,"image.html",{"image":image})
+         raise Http404()
+    return render(request,"image.html",{"image":image})
 
 def search_results(request):
 
@@ -50,9 +62,3 @@ def search_results(request):
     else:
         message = "You haven't searched for any image"
         return render(request, 'search.html',{"message":message})
-
-
-def location(request,location_id):
-    image=Image.objects.filter(id=location_id)
-
-    return render(request,'location.html',{"image":image})

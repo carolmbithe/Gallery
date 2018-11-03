@@ -22,9 +22,12 @@
       <li class="dropdown">
         <a class="dropdown-toggle" data-toggle="dropdown" href="#">Category<span class="caret"></span></a>
         <ul class="dropdown-menu">
-          <li><a href="{% url 'index' %}">Food</a></li>
+          <li><a href="{% url 'category' 1 %}">Food</a></li>
 
-          <li><a href="{% url 'index' %}">Design</a></li>
+          <li><a href="{% url 'category' 2 %}">Design</a></li>
+          <li><a href="{% url 'category' 3 %}">Design</a></li>
+          <li><a href="{% url 'category' 4 %}">Design</a></li>
+          <li><a href="{% url 'category' 5 %}">Design</a></li>
 
 
         </ul>
@@ -32,10 +35,11 @@
       <li class="dropdown">
         <a class="dropdown-toggle" data-toggle="dropdown" href="#">Location<span class="caret"></span></a>
         <ul class="dropdown-menu">
-        <li><a href="#">Ngong</a></li>
-
-        <li><a href="#">Nairobi</a></li>
-
+        <li><a href="{% url 'location' 1 %}">Ngong</a></li>
+        <li><a href="{% url 'location' 2 %}">Nairobi</a></li>
+        <li><a href="{% url 'location' 3 %}">Nairobi</a></li>
+        <li><a href="{% url 'location' 4 %}">Nairobi</a></li>
+        <li><a href="{% url 'location' 5 %}">Nairobi</a></li>
 
         </ul>
       </li>
