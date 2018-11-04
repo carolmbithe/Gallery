@@ -1,9 +1,12 @@
-{%extends 'all-photos/base.html'%}
+{%extends 'base.html'%}
 
 {% block content %}
 {{block.super}}
 
 <div class="container">
+  <body style="background-color:#0A0A0B">
+
+
 
   <!-- Looping through news   -->
 
@@ -23,7 +26,7 @@
     <h2 class="text-center">There are no photos yet</h2>
   </div>
   {% endfor %}
-
+</body>
 </div>
 
 {% endblock %}
