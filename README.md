@@ -4,10 +4,10 @@ Python 3.6 Application
 ## By Caroline Mumo
 
 ## Description of the application
-This application allows writers to create and their blogs and other users can read and comment on them.
+A gallery application that you display your photos for others to see.
 
 ## Project setup instructions
-You can install this app by cloning the repository from this link https://github.com/carolmbithe/Personalblog.git
+You can install this app by cloning the repository from this link https://github.com/carolmbithe/Gallery.git
 
 ## Known Bugs
 There are no known bugs so far,everything is working.
@@ -17,7 +17,7 @@ There are no known bugs so far,everything is working.
 This project was generated with: * CSS</br  >
 * Bootstrap</br  >
 * Python3.6</br  >
-* flask</br  >
+* Django framework</br  >
 
 
 ## Support and contact details
