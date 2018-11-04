@@ -22,12 +22,11 @@
       <li class="dropdown">
         <a class="dropdown-toggle" data-toggle="dropdown" href="#">Category<span class="caret"></span></a>
         <ul class="dropdown-menu">
-          <li><a href="{% url 'category' 1 %}">Food</a></li>
+          <li><a href="{% url 'category' 5 %}">Movies</a></li>
 
-          <li><a href="{% url 'category' 2 %}">Design</a></li>
-          <li><a href="{% url 'category' 3 %}">Design</a></li>
-          <li><a href="{% url 'category' 4 %}">Design</a></li>
-          <li><a href="{% url 'category' 5 %}">Design</a></li>
+          <li><a href="{% url 'category' 6 %}">Food</a></li>
+          <li><a href="{% url 'category' 7 %}">Design</a></li>
+          <li><a href="{% url 'category' 8 %}">Adventure</a></li>
 
 
         </ul>
@@ -35,11 +34,11 @@
       <li class="dropdown">
         <a class="dropdown-toggle" data-toggle="dropdown" href="#">Location<span class="caret"></span></a>
         <ul class="dropdown-menu">
-        <li><a href="{% url 'location' 1 %}">Ngong</a></li>
-        <li><a href="{% url 'location' 2 %}">Nairobi</a></li>
-        <li><a href="{% url 'location' 3 %}">Nairobi</a></li>
-        <li><a href="{% url 'location' 4 %}">Nairobi</a></li>
-        <li><a href="{% url 'location' 5 %}">Nairobi</a></li>
+        <li><a href="{% url 'location' 6 %}">America</a></li>
+        <li><a href="{% url 'location' 7 %}">Nairobi</a></li>
+        <li><a href="{% url 'location' 8 %}">Mombasa</a></li>
+        <li><a href="{% url 'location' 9 %}">Sagana</a></li>
+        <li><a href="{% url 'location' 10 %}">Dubai</a></li>
 
         </ul>
       </li>
@@ -52,7 +51,7 @@
         <form class="navbar-form" role="search" action="{% url 'search_results' %}">
 
           <div class="input-group">
-            <input type="text" class="form-control" placeholder="Search Image" name="image">
+            <input type="text" class="form-control" placeholder="Search by category" name="image">
             <div class="input-group-btn">
               <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
             </div>

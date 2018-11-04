@@ -1,7 +1,7 @@
 from django.shortcuts import render,redirect
 from django.http import HttpResponse,Http404
 import datetime as dt
-from .models import Image,Location
+from .models import Image,Location,Category
 
 
 # Create your views here.
@@ -33,22 +33,25 @@ def past_photos(request,past_date):
 
 
 def location(request,location_id):
-    photos=Image.objects.filter(id=location_id)
+    photos=Image.objects.filter(location_id=location_id)
 
     return render(request,'location.html',{"photos":photos})
 
 def category(request,category_id):
-    photos=Image.objects.filter(id=category_id)
+    photos=Image.objects.filter(category_id=category_id)
 
     return render(request,'category.html',{"photos":photos})
 
 
-def image(request,image_id):
+def imagedetails(request,image_id):
     try:
         image = Image.objects.get(id=image_id)
     except DoesNotExist:
          raise Http404()
     return render(request,"image.html",{"image":image})
+
+def copy_image(from_model, to_model):
+    to_model.image.save(from_model.image.url.split('/')[-1],from_model.image.file,save=True)
 
 def search_results(request):
 

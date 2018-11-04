@@ -32,6 +32,11 @@ class Location(models.Model):
     def delete_location(self):
         self.delete()
 
+    # @classmethod
+    # def update_location(cls,location,update):
+    #     updated = cls.objects.filter(image_name=location).update(name=update)
+    #     return updated
+
 class Image(models.Model):
     image=models.ImageField(upload_to ='images/')
     name=models.CharField(max_length =30)
@@ -52,7 +57,7 @@ class Image(models.Model):
         # Image.objects.filter(id=2).delete()
 #     #
 #     # def update_image:
-#     #     Image.objects.filter(id=2).update(description='sth')
+#     #     Image.objects.filter(id=2).update(location='sth')
 #
     @classmethod
     def get_photos(cls):
@@ -68,7 +73,7 @@ class Image(models.Model):
 
     @classmethod
     def search_by_category(cls,search_term):
-        photos=cls.objects.filter(category__icontains=search_term)
+        photos=cls.objects.filter(category__name__icontains=search_term)
         return photos
 
     @classmethod

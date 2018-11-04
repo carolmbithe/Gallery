@@ -7,12 +7,13 @@
 
   <!-- Looping through news   -->
 
-
   <div class="row">
     {% for photo in photos %}
+
     <!-- displaying News articles -->
-    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-      <img src="{{photo.image.url}}" class="img-responsive" alt="Image"> </h2>
+    <div class="col-md-4">
+
+    <a href="{% url 'imagedetails' photo.id %}"><img src="{{photo.image.url}}" class="img-responsive" alt="Image"></a>
     </div>
 
   </div>

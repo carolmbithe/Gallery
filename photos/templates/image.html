@@ -13,12 +13,14 @@
    </div>
 
    <div class="row">
-     <p>{{image.description}}</p>
+     <p class="text-center"><strong>Description</strong></p>
+       <p class="text-center">{{image.description}}</p>
    </div>
 
-   <div class="row">
-     <p>Category {{image.category.name}} </p>
-       <p> {{image.location.name}}</p>
+   <div class="row text-center">
+     <p class="text-center"><strong>Category:</strong> {{image.category.name}} </p>
+       <p class="text-center"> <strong>Location:</strong>{{image.location.name}}</p>
+       <button type="button" class="btn btn-success center">CopyLink</button>
    </div>
 
  </div>
