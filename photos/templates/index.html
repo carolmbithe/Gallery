@@ -17,7 +17,7 @@
     <div class="col-md-6">
 
     <a href="{% url 'imagedetails' photo.id %}"><img src="{{photo.image.url}}" class="img-responsive" alt="Image"></a>
-    <input class="form-control input-lg" type="text" value="https://gallery-django.heroku.com{{photo.image.url}}" id ="{{photo.id}}-url">
+    <input class="form-control input-lg" type="text" value="https://gallery003.heroku.com{{photo.image.url}}" id ="{{photo.id}}-url">
     <button class="btn btn-outline-info" onclick="copyUrl('{{photo.id}}-url')">Copy Image Url</button>
     </div>
 
