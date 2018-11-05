@@ -55,3 +55,4 @@ class ImageTestClass(TestCase):
         Category.objects.all().delete()
         Location.objects.all().delete()
         Image.objects.all().delete()
+   
