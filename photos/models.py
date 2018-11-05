@@ -47,18 +47,11 @@ class Image(models.Model):
     def __str__(self):
         return self.name
 
-    # class Meta:
-        # ordering = ('name')
-
     def save_image(self):
         self.save()
     def delete_image(self):
         self.delete()
-        # Image.objects.filter(id=2).delete()
-#     #
-#     # def update_image:
-#     #     Image.objects.filter(id=2).update(location='sth')
-#
+
     @classmethod
     def get_photos(cls):
 
