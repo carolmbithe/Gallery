@@ -1,4 +1,4 @@
-# PERSONAL BLOG
+# PHOTO-GALLERY
 Python 3.6 Application
 
 ## By Caroline Mumo
@@ -7,17 +7,25 @@ Python 3.6 Application
 A gallery application that you display your photos for others to see.
 
 ## Project setup instructions
-You can install this app by cloning the repository from this link https://github.com/carolmbithe/Gallery.git
+You can install this app by cloning the repository from this link https://github.com/carolmbithe/Gallery.git</br  >
+* On your terminal,Navigate to created directory.</br  >
+* Run the following commands to allow functionality of the app:-</br  >
+* sudo apt-get update sudo apt-get install python3.6 python3.6 -m venv virtual source virtual/bin/activate</br  >
+
+* Download the latest version of pip in the virtual environment: $ curl https://bootstrap.pypa.io/get-pip.py | python pip install -r requirements.txt</br  >
 
 ## Known Bugs
 There are no known bugs so far,everything is working.
 
 
 ## Technologies Used
-This project was generated with: * CSS</br  >
-* Bootstrap</br  >
+This project was generated with:
+* CSS</br  >
+* Bootstrap3</br  >
 * Python3.6</br  >
 * Django framework</br  >
+* Postgresql</br  >
+
 
 
 ## Support and contact details
